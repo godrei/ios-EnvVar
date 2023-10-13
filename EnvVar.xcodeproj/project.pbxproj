@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,6 +42,7 @@
 		131FAE072AD3FB3700E09884 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		131FAE0D2AD3FB3700E09884 /* EnvVarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnvVarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		131FAE112AD3FB3700E09884 /* EnvVarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvVarTests.swift; sourceTree = "<group>"; };
+		1371B8572AD9835B0090737D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		13EFEEA52AD6D2E60083F07A /* EnvVarProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvVarProvider.swift; sourceTree = "<group>"; };
 		13EFEEAB2AD6D4EB0083F07A /* EnvVarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnvVarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EFEEAD2AD6D4EB0083F07A /* EnvVarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvVarUITests.swift; sourceTree = "<group>"; };
@@ -96,6 +97,7 @@
 		131FADFF2AD3FB3600E09884 /* EnvVar */ = {
 			isa = PBXGroup;
 			children = (
+				1371B8572AD9835B0090737D /* Info.plist */,
 				131FAE002AD3FB3600E09884 /* EnvVarApp.swift */,
 				131FAE022AD3FB3600E09884 /* ContentView.swift */,
 				13EFEEA52AD6D2E60083F07A /* EnvVarProvider.swift */,
@@ -209,7 +211,7 @@
 				};
 			};
 			buildConfigurationList = 131FADF82AD3FB3600E09884 /* Build configuration list for PBXProject "EnvVar" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -426,7 +428,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EnvVar/Preview Content\"";
 				DEVELOPMENT_TEAM = DT2C2FZ7U2;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = EnvVar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -455,7 +458,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EnvVar/Preview Content\"";
 				DEVELOPMENT_TEAM = DT2C2FZ7U2;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = EnvVar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
