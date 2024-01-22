@@ -1,0 +1,50 @@
+format_version: "11"
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: other
+workflows:
+  curl_appstoreconnent:
+    steps:
+    - script@1.1.5:
+        inputs:
+        - content: |-
+            set -e
+            set -x
+
+            DEV_DATA_PATH=apple_developer_portal_data.json
+            curl -s -X GET -H "BUILD_API_TOKEN: $BITRISE_BUILD_API_TOKEN" $BITRISE_BUILD_URL/apple_developer_portal_data.json > $DEV_DATA_PATH
+            cp $DEV_DATA_PATH $BITRISE_DEPLOY_DIR
+    - deploy-to-bitrise-io@1: {}
+  _shared:
+    steps:
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@7.0: {}
+  deploy:
+    before_run:
+    - _shared
+    steps:
+    - script@1:
+        title: Do anything with Script step
+    - deploy-to-bitrise-io@2: {}
+  primary:
+    before_run:
+    - _shared
+    steps:
+    - script@1:
+        title: Do anything with Script step
+    - deploy-to-bitrise-io@2: {}
+  primary_1:
+    before_run:
+    - _shared
+    steps:
+    - script@1:
+        title: Do anything with Script step
+    - deploy-to-bitrise-io@2: {}
+meta:
+  bitrise.io:
+    stack: osx-xcode-15.0.x
+    machine_type_id: g2-m1.8core
+trigger_map:
+- pull_request_target_branch: main
+  workflow: primary
+  draft_pull_request_enabled: false
