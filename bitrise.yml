@@ -47,4 +47,3 @@ meta:
 trigger_map:
 - pull_request_target_branch: main
   workflow: primary
-  draft_pull_request_enabled: false
