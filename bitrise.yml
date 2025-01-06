@@ -58,8 +58,9 @@ workflows:
             keytool -v -list -keystore ./keystore
 meta:
   bitrise.io:
-    stack: osx-xcode-15.0.x-edge
-    machine_type_id: g2-m1.4core
+    stack: osx-xcode-16.0.x
+    machine_type_id: g2.mac.medium
+
 trigger_map:
 - pull_request_source_branch: "*"
   type: pull_request
